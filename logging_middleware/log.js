@@ -60,7 +60,7 @@ function Log(stack, level, packageName, message) {
 		data,
 	};
 
-	return axios.request(config);
+	return axios.request(config).catch(() => null);
 }
 
 module.exports = Log;
